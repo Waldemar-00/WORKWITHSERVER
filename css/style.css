@@ -78,3 +78,13 @@ input {
     padding: 0 15px;
     outline: none;
 }
+section {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-size: 40px;
+    color: brown;
+}
