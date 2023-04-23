@@ -20,10 +20,10 @@ function createFromServer (e, data) {
     document.querySelector('.app').append(card)
   })
 }
-document.querySelector('button').addEventListener('click', (e) => {
-  fetch('http://localhost:3000/people')
-    .then(response => response.json())
-    .then(response => {
+fetch('http://localhost:3000/people')
+  .then(response => response.json())
+  .then(response => {
+    document.querySelector('button').addEventListener('click', (e) => {
       createFromServer(e, response)
-    }).catch(error => console.error(error, 'Error'))
-})
+    })
+  }).catch(error => console.error(error, 'Error'))
