@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
           data.forEach(item => {
             const card = document.createElement('div')
             card.classList.add('card')
-            let icon;
+            let icon
             if (item.sex === 'male') {
               icon = 'icons/mars.png'
             } else {
@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
               `
             document.querySelector('.app').append(card)
           })
-        }, {once: true})
+        }, { once: true })
       } else {
         console.error(req.status)
       }
