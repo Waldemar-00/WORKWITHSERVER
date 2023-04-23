@@ -1,3 +1,10 @@
+async function getResource (url) {
+  const response = await fetch(url)
+  if (!response.ok) {
+    throw new Error(`Could not fetch from ${url}, status: ${response.status}`)
+  }
+  return await response.json()
+}
 function createFromServer (e, data) {
   e.target.remove()
   data.forEach(item => {
@@ -20,10 +27,9 @@ function createFromServer (e, data) {
     document.querySelector('.app').append(card)
   })
 }
-fetch('http://localhost:3000/people')
-  .then(response => response.json())
-  .then(response => {
+getResource('http://localhost:3000/people')
+  .then(data => {
     document.querySelector('button').addEventListener('click', (e) => {
-      createFromServer(e, response)
+      createFromServer(e, data)
     })
-  }).catch(error => console.error(error, 'Error'))
+  })
