@@ -39,6 +39,16 @@
       "name": "Alex",
       "age": "From FORM",
       "id": 0.3446058083707839
+    },
+    {
+      "name": "Alex",
+      "age": "FETCH-POST",
+      "id": "0.09130406520008028"
+    },
+    {
+      "name": "Alex",
+      "age": "FETCH-POST_2",
+      "id": "0.3854091932744652"
     }
   ]
 }
