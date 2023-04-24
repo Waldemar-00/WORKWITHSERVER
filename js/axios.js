@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 async function getResource (url) {
   const response = await axios(url) // ! 1
   if (response.status !== 200) { // ! 2
