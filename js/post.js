@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-  function request() {
+  function request () {
     const body = {
       name: 'Alex',
       surname: 'Brown',
